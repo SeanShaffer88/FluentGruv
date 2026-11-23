@@ -1,0 +1,31 @@
+name: validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild generated artifacts
+        run: npm run build
+
+      - name: Fail on generated-file drift
+        run: |
+          if ! git diff --quiet -- ai-bundle.md AGENT_PROMPT.md examples/prototype/tokens.css; then
+            echo "::error::Generated files are out of date. Run 'npm run build' and commit the result."
+            git diff --stat -- ai-bundle.md AGENT_PROMPT.md examples/prototype/tokens.css
+            exit 1
+          fi
+
+      - name: Contrast thresholds
+        run: npm run check:contrast
+
+      - name: Prompt has no hardcoded colors
+        run: npm run check:prompt
