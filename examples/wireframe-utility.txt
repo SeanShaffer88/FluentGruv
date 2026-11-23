@@ -1,0 +1,42 @@
+FluidStandard — Wireframe: Utility Workspace
+=============================================
+Main workspace + collapsible right drawer + collapsible bottom drawer
++ circular progress readout. No primary-window scrollbar; scrolling is
+confined to the virtualized list in the workspace.
+
+Tokens: bg.canvas #1D2021 | bg.surface #282828 | bg.elevated #32302F
+        accent.primary #FB4934 (focus rings, active mode, progress arc)
+
++-----------------------------------------------------------------------+
+| [=] MyUtility        [ Scan / Monitor ] [ Inspect / Diff ] [ Config ] |  <- Action bar: primary
+|----------------------------------------------------------|------------|    actions for active mode
+| MAIN WORKSPACE (Scan / Monitor)              |  PROGRESS |  RIGHT     |
+|                                              |           |  DRAWER    |
+|  +----------------------------------------+  |   .---.   | (collap-   |
+|  | Name            Size      Status     ^ |  |  /  72% \  |  sible)    |
+|  | file-a.bin      1.2 MB    Done       | |  | |   42    | |            |
+|  | file-b.bin    840.0 KB    Scanning   | |  |  \ MB/s /  |  Inspect:  |
+|  | file-c.bin      2.4 MB    Queued     v |  |   '---'   |  file-b.bin|
+|  +----------------------------------------+  |  circular/ |            |
+|  Virtualized list only scrolls (owner-data)  |  radial    |  Path:     |
+|  Tabular numerals — sizes do not jitter.     |  readout   |  C:\...\b  |
+|                                              |           |            |
+|  [ Scan ] [ Pause ] [ Cancel ]               |  Esc or >  |  [x Close] |
+|----------------------------------------------|  toggle ---+------------|
+| BOTTOM DRAWER (collapsible, ^ / v toggle)                             |
+|  Logs — 12:04:31 scan started · 12:04:33 file-b.bin scanning · ...    |
+|  (log container scrolls internally; main window never does)           |
++-----------------------------------------------------------------------+
+| Status: Scanning 2 of 3 · Drawer state + geometry persist locally     |  <- Status bar
++-----------------------------------------------------------------------+
+
+Behaviour
+---------
+- Right drawer: slides over/beside workspace, Esc or outside click
+  dismisses, focus returns to workspace, state persists in local config.
+- Bottom drawer: collapses to a one-line strip; splitter position persists.
+- Narrow viewport: right drawer becomes a slide-out overlay, sidebar
+  (if any) collapses to an icon rail; workspace keeps its minimum size.
+- Progress: circular arc in accent.primary, % + throughput in tabular
+  monospace numerals at the centre — never a hidden stall.
+- Geometry validated against EnumDisplayMonitors on launch.
