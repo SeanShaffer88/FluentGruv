@@ -6,6 +6,10 @@
     "build": "node scripts/build-bundle.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
     "check:prompt": "node scripts/check-prompt.mjs",
-    "validate": "npm run build && npm run check:contrast && npm run check:prompt"
+    "validate": "npm run build && npm run check:contrast && npm run check:prompt && npm run check:layout",
+    "check:layout": "node scripts/check-layout.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
   }
 }

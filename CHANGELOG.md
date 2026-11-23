@@ -5,6 +5,7 @@
 - `AGENT_PROMPT.md` is now generated from `AGENT_PROMPT.template.md` by `scripts/build-bundle.mjs`, which also builds `ai-bundle.md` and `examples/prototype/tokens.css`; `scripts/build-bundle.py` is retired. Single gate: `npm run validate`. CI (`.github/workflows/validate.yml`) fails on generated-file drift, contrast regressions, or template hexes.
 - Added `examples/prototype/`: a runnable reference page consuming the generated CSS tokens.
 - Added SPEC.md §6 Validation — the conformance checklist (automated, reflow, interaction, content stress, accessibility).
+- Phase 6 (approved separately, adds the Playwright dev dependency): `scripts/check-layout.mjs` mechanizes §6.2/§6.4 against the prototype at all four viewports, including the 200-character string stress; it is in the local `npm run validate` chain and verified both passing and failing (broken-overflow prototype). CI does not run it — the workflow keeps the zero-dependency checks only.
 
 ## 1.2.0 — 2026-11-23
 - Light `accent.subtle` is now defined by rule — `accent.primary` at 15% over `bg.surface` = `#F4D2AE` — instead of a hand-picked tint.
