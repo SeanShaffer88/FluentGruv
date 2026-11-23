@@ -32,3 +32,34 @@
 - Support standard shortcuts (`Esc` to cancel/close drawers, `Enter` to submit/confirm).
 - Provide descriptive tooltips on interactive controls, icon buttons, and column headers explaining action and side effects.
 - Honor Windows dark/light theme changes and Per-Monitor DPI V2 scaling dynamically without requiring a restart.
+## 6. Validation
+
+An implementation conforms to this spec only if it passes every check below.
+These are manual unless marked otherwise; contrast is automated via
+`npm run check:contrast`.
+
+### 6.1 Automated (CI-enforced)
+- [ ] Every pair in `contrast-pairs.json` meets its minimum ratio.
+- [ ] `AGENT_PROMPT.template.md` contains no literal hex colors.
+- [ ] `ai-bundle.md`, `AGENT_PROMPT.md`, and `examples/prototype/tokens.css` are up to date (`npm run build` produces no diff).
+
+### 6.2 Viewport reflow
+Test at 1024×700, 1280×800, 1440×900, and 1920×1080.
+- [ ] The main application window never produces a scrollbar.
+- [ ] Only the designated content region scrolls; the shell and sidebar do not change height between viewports.
+- [ ] No element is clipped or overlaps at any listed size.
+
+### 6.3 Interaction
+- [ ] Drawers open/close within 200 ms.
+- [ ] With reduced-motion settings on, drawers appear/disappear with no transition.
+- [ ] Every interactive element shows a visible focus ring at 3:1 or better against its background.
+- [ ] Focus is never trapped; tab order follows visual order; `Esc` closes drawers.
+
+### 6.4 Content stress
+- [ ] A 200-character unbroken string does not widen the layout or cause a horizontal scrollbar.
+- [ ] Empty states render for: no items, no results, and error.
+- [ ] 500+ rows use a virtualized list; scroll performance stays smooth.
+
+### 6.5 Accessibility
+- [ ] 200% zoom at 1280×800 preserves all content with no clipping.
+- [ ] All status indicators pair color with a non-color cue (glyph or text).

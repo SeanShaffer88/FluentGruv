@@ -1,0 +1,11 @@
+{
+  "name": "fluentgruv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-bundle.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "check:prompt": "node scripts/check-prompt.mjs",
+    "validate": "npm run build && npm run check:contrast && npm run check:prompt"
+  }
+}

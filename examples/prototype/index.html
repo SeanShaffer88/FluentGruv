@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FluentGruv — reference prototype</title>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    /* Layout rules from SPEC.md, expressed literally. */
+    html, body { height: 100%; margin: 0; overflow: hidden; } /* no main-window scrollbars */
+    body {
+      display: grid;
+      grid-template-rows: 40px 1fr;
+      background: var(--bg-canvas);
+      color: var(--fg-primary);
+      font: 13px/1.4 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+    }
+    .titlebar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 0 12px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .shell { display: grid; grid-template-columns: 220px 1fr; min-height: 0; }
+    .sidebar {
+      overflow-y: auto; /* only scrollable region */
+      padding: 8px;
+      border-right: 1px solid var(--border-subtle);
+    }
+    .content { min-width: 0; overflow: hidden; padding: 16px 20px; }
+    .btn {
+      font: inherit; padding: 6px 14px; border-radius: 4px; cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface); color: var(--fg-primary);
+    }
+    .btn--primary {
+      background: var(--accent-primary);
+      color: var(--fg-inverse);
+      border-color: var(--accent-primary);
+    }
+    /* Visible, contrast-checked focus ring — SPEC.md requirement. */
+    :focus-visible {
+      outline: 2px solid var(--accent-focus);
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    .muted { color: var(--fg-muted); }
+    .row { display: flex; gap: 8px; align-items: center; margin-block: 12px; }
+    a { color: var(--accent-primary); }
+  </style>
+</head>
+<body>
+  <header class="titlebar">
+    <strong>FluentGruv</strong>
+    <span class="muted">reference prototype</span>
+  </header>
+  <div class="shell">
+    <nav class="sidebar">
+      <div class="row"><a href="#">Overview</a></div>
+      <div class="row"><a href="#">Settings</a></div>
+      <div class="row"><a href="#">Logs</a></div>
+    </nav>
+    <main class="content">
+      <h1 style="font-size:20px;margin:0 0 8px">Canvas</h1>
+      <p class="muted">Body text uses <code>fg.primary</code>; this line uses <code>fg.muted</code>.</p>
+      <div class="row">
+        <button class="btn btn--primary">Primary</button>
+        <button class="btn">Secondary</button>
+      </div>
+      <p class="muted">Resize the window: the shell reflows, the main window never scrolls,
+      and the sidebar absorbs overflow. Add <code>data-theme="light"</code> to the
+      <code>&lt;html&gt;</code> element to see the light palette.</p>
+    </main>
+  </div>
+</body>
+</html>

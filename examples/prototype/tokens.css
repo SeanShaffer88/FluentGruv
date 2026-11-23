@@ -1,0 +1,39 @@
+/* GENERATED from tokens.json by npm run build — do not edit */
+:root {
+  --accent-primary: #FB4934;
+  --accent-secondary: #CC241D;
+  --accent-subtle: #3B1D1B;
+  --bg-canvas: #1D2021;
+  --bg-elevated: #32302F;
+  --bg-sunken: #171819;
+  --bg-surface: #282828;
+  --border-strong: #504945;
+  --border-subtle: #3C3836;
+  --fg-inverse: #1D2021;
+  --fg-muted: #A89984;
+  --fg-primary: #EBDBB2;
+  --fg-secondary: #D5C4A1;
+  --status-danger: #FB4934;
+  --status-success: #B8BB26;
+  --status-warning: #FABD2F;
+  --accent-focus: #FB4934;
+}
+[data-theme="light"] {
+  --accent-primary: #CC241D;
+  --accent-secondary: #9D0006;
+  --accent-subtle: #F4D2AE;
+  --bg-canvas: #F9F5D7;
+  --bg-elevated: #EBDBB2;
+  --bg-sunken: #F2E5BC;
+  --bg-surface: #FBF1C7;
+  --border-strong: #BDAE93;
+  --border-subtle: #D5C4A1;
+  --fg-inverse: #FBF1C7;
+  --fg-muted: #665C54;
+  --fg-primary: #282828;
+  --fg-secondary: #3C3836;
+  --status-danger: #CC241D;
+  --status-success: #79740E;
+  --status-warning: #AF3A03;
+  --accent-focus: #CC241D;
+}

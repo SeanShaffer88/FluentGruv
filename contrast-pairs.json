@@ -1,0 +1,187 @@
+{
+  "$comment": "Enforceable version of the TOKENS.md \u00a74 table. fg/bg are dot-paths into tokens.json; min is the WCAG floor for that use (4.5 body/small text, 3.0 large text, status glyphs, UI/focus indicators).",
+  "pairs": [
+    {
+      "id": "dark-primary-on-canvas",
+      "fg": "themes.dark.fg.primary",
+      "bg": "themes.dark.bg.canvas",
+      "min": 4.5,
+      "use": "body text (dark)"
+    },
+    {
+      "id": "dark-primary-on-surface",
+      "fg": "themes.dark.fg.primary",
+      "bg": "themes.dark.bg.surface",
+      "min": 4.5,
+      "use": "panel text (dark)"
+    },
+    {
+      "id": "dark-primary-on-elevated",
+      "fg": "themes.dark.fg.primary",
+      "bg": "themes.dark.bg.elevated",
+      "min": 4.5,
+      "use": "drawer / raised panel text (dark)"
+    },
+    {
+      "id": "dark-primary-on-sunken",
+      "fg": "themes.dark.fg.primary",
+      "bg": "themes.dark.bg.sunken",
+      "min": 4.5,
+      "use": "input / log text (dark)"
+    },
+    {
+      "id": "dark-secondary-on-surface",
+      "fg": "themes.dark.fg.secondary",
+      "bg": "themes.dark.bg.surface",
+      "min": 4.5,
+      "use": "secondary text (dark)"
+    },
+    {
+      "id": "dark-muted-on-surface",
+      "fg": "themes.dark.fg.muted",
+      "bg": "themes.dark.bg.surface",
+      "min": 4.5,
+      "use": "hints / timestamps (dark)"
+    },
+    {
+      "id": "dark-muted-on-elevated",
+      "fg": "themes.dark.fg.muted",
+      "bg": "themes.dark.bg.elevated",
+      "min": 4.5,
+      "use": "hints on drawers (dark)"
+    },
+    {
+      "id": "dark-primary-on-accent-subtle",
+      "fg": "themes.dark.fg.primary",
+      "bg": "themes.dark.accent.subtle",
+      "min": 4.5,
+      "use": "selected row text (dark)"
+    },
+    {
+      "id": "dark-inverse-on-accent",
+      "fg": "themes.dark.fg.inverse",
+      "bg": "themes.dark.accent.primary",
+      "min": 4.5,
+      "use": "filled accent label (dark)"
+    },
+    {
+      "id": "dark-success-on-surface",
+      "fg": "themes.dark.status.success",
+      "bg": "themes.dark.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (dark)"
+    },
+    {
+      "id": "dark-warning-on-surface",
+      "fg": "themes.dark.status.warning",
+      "bg": "themes.dark.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (dark)"
+    },
+    {
+      "id": "dark-danger-on-surface",
+      "fg": "themes.dark.status.danger",
+      "bg": "themes.dark.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (dark)"
+    },
+    {
+      "id": "dark-accent-on-canvas",
+      "fg": "themes.dark.accent.primary",
+      "bg": "themes.dark.bg.canvas",
+      "min": 3.0,
+      "use": "focus ring / active indicator (dark)"
+    },
+    {
+      "id": "light-primary-on-canvas",
+      "fg": "themes.light.fg.primary",
+      "bg": "themes.light.bg.canvas",
+      "min": 4.5,
+      "use": "body text (light)"
+    },
+    {
+      "id": "light-primary-on-surface",
+      "fg": "themes.light.fg.primary",
+      "bg": "themes.light.bg.surface",
+      "min": 4.5,
+      "use": "panel text (light)"
+    },
+    {
+      "id": "light-primary-on-elevated",
+      "fg": "themes.light.fg.primary",
+      "bg": "themes.light.bg.elevated",
+      "min": 4.5,
+      "use": "drawer / raised panel text (light)"
+    },
+    {
+      "id": "light-primary-on-sunken",
+      "fg": "themes.light.fg.primary",
+      "bg": "themes.light.bg.sunken",
+      "min": 4.5,
+      "use": "input / log text (light)"
+    },
+    {
+      "id": "light-secondary-on-surface",
+      "fg": "themes.light.fg.secondary",
+      "bg": "themes.light.bg.surface",
+      "min": 4.5,
+      "use": "secondary text (light)"
+    },
+    {
+      "id": "light-muted-on-surface",
+      "fg": "themes.light.fg.muted",
+      "bg": "themes.light.bg.surface",
+      "min": 4.5,
+      "use": "hints / timestamps (light)"
+    },
+    {
+      "id": "light-muted-on-elevated",
+      "fg": "themes.light.fg.muted",
+      "bg": "themes.light.bg.elevated",
+      "min": 4.5,
+      "use": "hints on drawers (light)"
+    },
+    {
+      "id": "light-primary-on-accent-subtle",
+      "fg": "themes.light.fg.primary",
+      "bg": "themes.light.accent.subtle",
+      "min": 4.5,
+      "use": "selected row text (light)"
+    },
+    {
+      "id": "light-inverse-on-accent",
+      "fg": "themes.light.fg.inverse",
+      "bg": "themes.light.accent.primary",
+      "min": 4.5,
+      "use": "filled accent label (light)"
+    },
+    {
+      "id": "light-success-on-surface",
+      "fg": "themes.light.status.success",
+      "bg": "themes.light.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (light)"
+    },
+    {
+      "id": "light-warning-on-surface",
+      "fg": "themes.light.status.warning",
+      "bg": "themes.light.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (light)"
+    },
+    {
+      "id": "light-danger-on-surface",
+      "fg": "themes.light.status.danger",
+      "bg": "themes.light.bg.surface",
+      "min": 3.0,
+      "use": "status glyph / text (light)"
+    },
+    {
+      "id": "light-accent-on-canvas",
+      "fg": "themes.light.accent.primary",
+      "bg": "themes.light.bg.canvas",
+      "min": 3.0,
+      "use": "focus ring / active indicator (light)"
+    }
+  ]
+}
