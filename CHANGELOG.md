@@ -1,6 +1,6 @@
 # FluentGruv Changelog
 
-## [Unreleased]
+## 1.3.0 — 2026-11-23
 - Validation harness (Node, no dependencies): `scripts/lib/color.mjs` shared color math, `contrast-pairs.json` making the §4 table an enforceable contract (both themes), `scripts/check-contrast.mjs` (exit 1 on any pair below its floor — verified by temporarily reverting the 1.1.0 muted fix), and `scripts/check-prompt.mjs` guarding the prompt template against hardcoded hexes.
 - `AGENT_PROMPT.md` is now generated from `AGENT_PROMPT.template.md` by `scripts/build-bundle.mjs`, which also builds `ai-bundle.md` and `examples/prototype/tokens.css`; `scripts/build-bundle.py` is retired. Single gate: `npm run validate`. CI (`.github/workflows/validate.yml`) fails on generated-file drift, contrast regressions, or template hexes.
 - Added `examples/prototype/`: a runnable reference page consuming the generated CSS tokens.

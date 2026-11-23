@@ -1,6 +1,6 @@
 # FluentGruv Tokens (Gruvbox Dark + Bespoke Red)
 
-**Version 1.2.0** — machine-readable companion: `tokens.json` (`colors` = dark theme, the default; `themes.dark` / `themes.light` carry both palettes).
+**Version 1.3.0** — machine-readable companion: `tokens.json` (`colors` = dark theme, the default; `themes.dark` / `themes.light` carry both palettes).
 
 ## 1. Color Palette (Gruvbox Dark Base + Red Accent)
 Use Gruvbox Dark warm-charcoal surfaces paired with a deliberate red accent system for active states, focus rings, and critical/destructive emphasis.
