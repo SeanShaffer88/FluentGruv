@@ -25,7 +25,7 @@
 ## 4. Progress, Motion & Fluent Materials
 - **Circular / Radial Progress:** Prefer circular or radial progress indicators with clear numeric/throughput status readouts over generic bars or hidden stalls.
 - **Crisp, purposeful motion:** Keep transitions short and responsive; never block workflows or thrash layouts during splitter/window drags.
-- **Selective Fluent surfaces:** Apply Mica or Acrylic only where it improves visual hierarchy or floating drawer separation; keep text tables, logs, and dense controls high-contrast and sharp.
+- **Selective Fluent surfaces:** Apply Mica or Acrylic only where it improves visual hierarchy or floating drawer separation, using the `material.*` tokens in `TOKENS.md` §2b (solid fallbacks included); keep text tables, logs, and dense controls high-contrast and sharp.
 
 ## 5. Keyboard Navigation & Accessibility
 - Maintain logical `Tab` order across visible controls and active drawers.
