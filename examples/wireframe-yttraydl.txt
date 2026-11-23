@@ -1,0 +1,43 @@
+FluentGruv — Wireframe: ytTrayDL (sample)
+==========================================
+Tray-first yt-dlp downloader. Lives in the system tray; clipboard
+listener -> rules engine -> small popup or silent download.
+Surfaces: tray popup (primary) + download manager window.
+
+Tray popup (appears on a supported copied link)
++---------------------------------------------+
+| ytTrayDL — link detected                    |
+| [thumb] Big Buck Bunny — 10:34              |
+|         youtube.com · 1080p · ~84.2 MB      |
+| Format: [ 1080p MP4 v ] [ Audio only ]      |
+| Folder: [ Downloads\Video        ] [ ... ]  |
+| [ Download ] [ Save for later ] [ Ignore ]  |
+| Esc dismisses · domain rules can auto-skip  |
++---------------------------------------------+
+
+Download manager (opened from the tray menu)
++-----------------------------------------------------------------------+
+| [=] ytTrayDL Downloads          [ Queue ] [ Later ] [ Rules ]         |
+|----------------------------------------------------------|------------|
+| QUEUE (virtualized)                          |  OVERALL  |  RIGHT     |
+| +----------------------------------------+   |           |  DRAWER    |
+| | > video-1   1080p   84.2 MB  42.1 MB/s|   |   .---.   |            |
+| |   video-2    720p   Queued            |   |  /  63% \  |  Rules:    |
+| | x video-3    ---    Failed [ Retry ]  |   | |  18.4   | |  Known     |
+| +----------------------------------------+   |  \ MB/s /  |  sites only|
+|                                              |   '---'   |  [x] Auto  |
+| [ Paste links ] [ Clear finished ]           |  circular |  download  |
+|                                              |  readout  |  Ignore:   |
+| Disk guard: 12.4 GB free — pause under 2 GB  |           |  [ domain ]|
+|----------------------------------------------|-----------+------------|
+| BOTTOM DRAWER (collapsible) — yt-dlp log (scrolls internally)         |
+|  [download]  63.2% of 84.2 MB at 42.1 MB/s ETA 00:01 ...              |
++-----------------------------------------------------------------------+
+| Tray: downloading 1 of 3 · queue-empty action: Do nothing v           |
++-----------------------------------------------------------------------+
+
+Behaviour
+---------
+- Tray icon can be hidden; right-click tray menu configures everything.
+- Silent mode: defaults download with no popup at all.
+- Failure shows in place with one-click Retry — never a hidden stall.

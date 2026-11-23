@@ -1,0 +1,34 @@
+FluentGruv — Wireframe: RoomForge (sample — Muse's pick)
+===========================================================
+Room planner: draw rooms to scale, place furniture in 2D, view in 3D.
+Modes: Plan / 2D · View / 3D · Print / Share. No prices, ever.
+
++-----------------------------------------------------------------------+
+| [=] RoomForge   [ Plan ] [ 3D View ] [ Print ]      Grid: 0.5 m  Snap |
+|----------------------------------------------------------|------------|
+| CANVAS (Plan, to scale)                      |  PLAN     |  RIGHT     |
+|                                              |           |  DRAWER    |
+|   0m        2m        4m        6m           |   .---.   | (collap-   |
+|   +-----------+[door]+-----------+           |  / 100% \  |  sible)    |
+|   | [sofa]              [window] |           | |  fit    | |            |
+|   |                              |           |  \       /  |  Inspector:|
+|   |        [ rug ]      [table]  |           |   '---'   |  Sofa      |
+|   | [socket]                     |           |  canvas   |  W 2.0 m   |
+|   +---[window]-------------------+           |  fit ring |  D 0.9 m   |
+|                                              |           |  Rotate: 0 |
+|  Tools: [Wall][Door][Window][Socket][Pipe]   |           |            |
+|         [Furniture v] [Measure] [Undo]       |           |  [ Delete ]|
+|----------------------------------------------|-----------+------------|
+| BOTTOM DRAWER (collapsible) — Product list (no prices)                |
+|  Sofa x1 · Rug x1 · Table x1 · Lamp x2 — from this plan only.          |
++-----------------------------------------------------------------------+
+| Plan autosaves as you go · reopening restores the exact view + zoom.  |
++-----------------------------------------------------------------------+
+
+Behaviour
+---------
+- Canvas never scrolls the main window: pan/zoom inside the canvas,
+  circular fit readout shows zoom % in tabular numerals.
+- Inspector lives in the right drawer; selecting on canvas opens it,
+  Esc closes it and returns focus to the canvas.
+- Splitters, drawer state, and zoom persist per plan, locally.

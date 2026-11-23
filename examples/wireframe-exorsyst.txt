@@ -1,0 +1,38 @@
+FluentGruv — Wireframe: ExorSyst (sample)
+==========================================
+Install snapshots + change inspector + guided uninstall review.
+Modes: Watch / Monitor · Inspect / Diff · Review / Quarantine
+Docking: tools dock Main, Right, or Bottom; layout saves locally.
+
++-----------------------------------------------------------------------+
+| [=] ExorSyst    [ Watch ] [ Inspect ] [ Review ]        (•) Ready     |
+|----------------------------------------------------------|------------|
+| MAIN WORKSPACE (Watch)                       |  BASELINE |  RIGHT     |
+|                                              |           |  DRAWER    |
+|  Scopes to compare:                          |   .---.   | (dockable) |
+|  [x] Folders: C:\Program Files\...           |  / Ready \  |            |
+|  [x] Registry: HKLM\Software subtrees        | |   ---   | |  Change    |
+|  [ ] Services        (read-only opt-in)      |  \       /  |  inspector |
+|  [ ] Scheduled tasks (read-only opt-in)      |   '---'   |            |
+|                                              |  idle /   |  Filter:   |
+|  [ Take baseline ]  -> install -> [ Compare ]|  coverage |  [ path.. ]|
+|                                              |  readout  |  Kind: All |
+|  Changes (virtualized, owner-data):          |           |  Dates: .. |
+|  +----------------------------------------+  |           |            |
+|  | + file   C:\...\new.dll      Added   |  |           |  [ Export   |
+|  | ~ reg    HKLM\...\Run       Changed |  |           |    JSON ]  |
+|  | - file   C:\...\old.tmp      Removed |  |           |  [ Report ]|
+|  +----------------------------------------+  |           |            |
+|----------------------------------------------|-----------+------------|
+| BOTTOM DRAWER (collapsible) — Quarantine review                       |
+|  Exact files only: [x] old.tmp  [ ] new.dll   [ Hold files ]          |
+|  Restore never overwrites an existing destination.                    |
++-----------------------------------------------------------------------+
+| Baseline 12:01 · Compare 12:09 · 3 changes · layout + scopes persist  |
++-----------------------------------------------------------------------+
+
+Behaviour
+---------
+- Esc closes the drawer, focus returns to the change list.
+- Quarantine is a previewed, reversible move — never a silent delete.
+- Coverage is stated honestly: scopes skipped are shown, not hidden.

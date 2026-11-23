@@ -1,0 +1,36 @@
+FluentGruv — Wireframe: SafeReturn (sample — Muse's pick)
+===========================================================
+Full-disk backup & recovery for ordinary users.
+Modes: Backup · Verify · Recovery Rehearsal / Restore
+
++-----------------------------------------------------------------------+
+| [=] SafeReturn  [ Backup ] [ Verify ] [ Rehearsal ]     (•) Idle     |
+|----------------------------------------------------------|------------|
+| MAIN WORKSPACE (Backup)                      |  BACKUP   |  RIGHT     |
+|                                              |           |  DRAWER    |
+|  Source:  [ This PC — Disk 0 (476 GB) v ]    |   .---.   | (collap-   |
+|  Target:  [ E:\ SafeReturn (1.2 TB free) v ] |  /  47% \  |  sible)    |
+|                                              | |  212    | |            |
+|  [x] Bootable backup (system + files)        |  \ MB/s /  |  Details:  |
+|  [x] Verify after backup                     |   '---'   |  VSS snap- |
+|  [ ] Encrypt (off by default, explained)     |  circular |  shot OK   |
+|                                              |  readout  |  Files:    |
+|  History (virtualized):                      |           |  184,203   |
+|  +----------------------------------------+  |  ETA      |  Skipped:  |
+|  | Nov 22  Full   Verified OK           |  |  00:18    |  0         |
+|  | Nov 15  Full   Verified OK           |  |           |            |
+|  +----------------------------------------+  |           |  [ Pause ] |
+|  [ Start backup ] [ Cancel ]                 |           |  [ Cancel ]|
+|----------------------------------------------|-----------+------------|
+| BOTTOM DRAWER (collapsible) — Recovery Rehearsal                      |
+|  Last rehearsal: Nov 22 — restored to a spare disk in a test boot OK. |
+|  [ Run rehearsal ]  Test your recovery before a crisis.               |
++-----------------------------------------------------------------------+
+| Plain words first: what will happen, how long, how to undo.           |
++-----------------------------------------------------------------------+
+
+Behaviour
+---------
+- Progress is the circular readout + MB/s + ETA — never a bare bar.
+- Verify and Rehearsal are first-class modes, not buried settings.
+- Esc cancels the drawer; a running backup is never cancelled by Esc.

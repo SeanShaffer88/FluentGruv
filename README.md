@@ -11,6 +11,7 @@ Designed to be linked directly into AI coding agent workflows so generated UIs m
 - `TOKENS.md` — Gruvbox Dark + red accent color tokens, spacing, radii, typography, and Windows DPI/theme rules.
 - `tokens.json` — Machine-readable companion to `TOKENS.md`: exact hex codes and spacing values for agents that parse JSON directly.
 - `examples/wireframe-utility.txt` — Concrete wireframe: main workspace + collapsible right/bottom drawers + circular progress readout.
+- `examples/wireframe-exorsyst.txt`, `examples/wireframe-yttraydl.txt`, `examples/wireframe-safereturn.txt`, `examples/wireframe-roomforge.txt` — Sample wireframes applying the rules to real programs: install-change inspection, a tray downloader popup + manager, disk backup with rehearsal, and a room planner canvas.
 
 ## Quick Start for AI Agents
 
