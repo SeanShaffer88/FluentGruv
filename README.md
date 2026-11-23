@@ -8,11 +8,12 @@ Designed to be linked directly into AI coding agent workflows so generated UIs m
 
 - `AGENT_PROMPT.md` — System/developer enforcement prompt for AI coding agents.
 - `SPEC.md` — Layout modes, docking/drawer rules, viewport discipline, motion, and accessibility rules.
-- `TOKENS.md` — Gruvbox Dark + red accent color tokens, spacing, radii, typography, and Windows DPI/theme rules.
+- `TOKENS.md` — Gruvbox Dark + red accent color tokens, plus the Gruvbox Light palette, spacing, radii, typography, and Windows DPI/theme rules.
 - `tokens.json` — Machine-readable companion to `TOKENS.md`: exact hex codes and spacing values for agents that parse JSON directly.
 - `examples/wireframe-utility.txt` — Concrete wireframe: main workspace + collapsible right/bottom drawers + circular progress readout.
 - `examples/wireframe-exorsyst.txt`, `examples/wireframe-yttraydl.txt`, `examples/wireframe-safereturn.txt`, `examples/wireframe-roomforge.txt` — Sample wireframes applying the rules to real programs: install-change inspection, a tray downloader popup + manager, disk backup with rehearsal, and a room planner canvas.
+- `CHANGELOG.md` — Spec version history (current version: **1.1.0**, also in `tokens.json`).
 
 ## Quick Start for AI Agents
 
-Point your coding agent to this repository and instruct it to read `AGENT_PROMPT.md`, `SPEC.md`, and `TOKENS.md` before writing or modifying UI code.
+Point your coding agent to this repository and instruct it to read `AGENT_PROMPT.md`, `SPEC.md`, and `TOKENS.md` before writing or modifying UI code. Agents that parse JSON directly should pull exact values from `tokens.json` (dark is the default; `themes.light` covers Windows light theme), and the `examples/` wireframes show the rules applied to concrete layouts.
