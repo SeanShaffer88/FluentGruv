@@ -1,4 +1,4 @@
-# FluidStandard UI & Layout Specification
+# FluentGruv UI & Layout Specification
 
 ## 1. Core Philosophy
 - **Adaptive over static:** Layouts reflow cleanly across narrow, standard, and ultra-wide Windows viewports, high-DPI displays, and high-refresh panels (60Hz–240Hz).

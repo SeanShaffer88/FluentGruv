@@ -1,6 +1,6 @@
-# FluidStandard — Adaptive & Modular Fluent Design for Windows
+# FluentGruv — Adaptive & Modular Fluent Design for Windows
 
-**FluidStandard** is a machine-readable UI and layout specification for native Windows desktop utilities. It adapts Microsoft's Fluent Design system with **high information density**, **symmetrical alignment**, **intent-driven workspace modes**, **modular slide-out drawers**, **circular/radial progress indicators**, and a **Gruvbox Dark palette accented with bespoke reds**.
+**FluentGruv** is a machine-readable UI and layout specification for native Windows desktop utilities. It adapts Microsoft's Fluent Design system with **high information density**, **symmetrical alignment**, **intent-driven workspace modes**, **modular slide-out drawers**, **circular/radial progress indicators**, and a **Gruvbox Dark palette accented with bespoke reds**.
 
 Designed to be linked directly into AI coding agent workflows so generated UIs match your exact ergonomics without bloat, main-window scrollbars, or generic templates.
 

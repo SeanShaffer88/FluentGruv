@@ -1,4 +1,4 @@
-FluidStandard — Wireframe: Utility Workspace
+FluentGruv — Wireframe: Utility Workspace
 =============================================
 Main workspace + collapsible right drawer + collapsible bottom drawer
 + circular progress readout. No primary-window scrollbar; scrolling is

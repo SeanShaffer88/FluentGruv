@@ -1,4 +1,4 @@
-# FluidStandard Tokens (Gruvbox Dark + Bespoke Red)
+# FluentGruv Tokens (Gruvbox Dark + Bespoke Red)
 
 ## 1. Color Palette (Gruvbox Dark Base + Red Accent)
 Use Gruvbox Dark warm-charcoal surfaces paired with a deliberate red accent system for active states, focus rings, and critical/destructive emphasis.

@@ -1,4 +1,4 @@
-# FluidStandard Enforcement Prompt for AI Coding Agents
+# FluentGruv Enforcement Prompt for AI Coding Agents
 
 When creating or modifying any user interface code for a Windows application, read `SPEC.md` and `TOKENS.md` in this repository first and enforce every rule below.
 
