@@ -13,6 +13,7 @@ Designed to be linked directly into AI coding agent workflows so generated UIs m
 - `examples/wireframe-utility.txt` — Concrete wireframe: main workspace + collapsible right/bottom drawers + circular progress readout.
 - `examples/wireframe-exorsyst.txt`, `examples/wireframe-yttraydl.txt`, `examples/wireframe-safereturn.txt`, `examples/wireframe-roomforge.txt` — Sample wireframes applying the rules to real programs: install-change inspection, a tray downloader popup + manager, disk backup with rehearsal, and a room planner canvas.
 - `CHANGELOG.md` — Spec version history (current version: **1.1.0**, also in `tokens.json`).
+- `ai-bundle.md` — The entire spec (prompt, layout rules, tokens, JSON, wireframes) in one file, for agents that fetch a single document.
 
 ## Quick Start for AI Agents
 

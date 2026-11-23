@@ -16,7 +16,7 @@ Use Gruvbox Dark warm-charcoal surfaces paired with a deliberate red accent syst
 ### Foreground & Text Tokens
 - `fg.primary` (`#EBDBB2`): Primary text and headings (Gruvbox `fg1`).
 - `fg.secondary` (`#D5C4A1`): Secondary labels and metadata (Gruvbox `fg2`).
-- `fg.muted` (`#928374`): Hints, timestamps, and inactive captions (Gruvbox `gray`).
+- `fg.muted` (`#A89984`): Hints, timestamps, and inactive captions (Gruvbox `fg4`; brightened from `gray` so small text clears 4.5:1 — see §4).
 - `fg.inverse` (`#1D2021`): Text placed on bright red or high-contrast accent fills.
 
 ### Red Accent & Semantic Tokens
@@ -41,7 +41,7 @@ Same token names, light values — swap the whole set on a Windows light-theme c
 ### Foreground & Text Tokens (Light)
 - `fg.primary` (`#3C3836`): Primary text and headings.
 - `fg.secondary` (`#504945`): Secondary labels and metadata.
-- `fg.muted` (`#928374`): Hints, timestamps, and inactive captions (Gruvbox gray, both themes).
+- `fg.muted` (`#665C54`): Hints, timestamps, and inactive captions (Gruvbox light `fg3`; darkened from `gray` so small text clears 4.5:1 — see §4).
 - `fg.inverse` (`#FBF1C7`): Text placed on red or high-contrast accent fills.
 
 ### Red Accent & Semantic Tokens (Light)
@@ -62,3 +62,15 @@ Same token names, light values — swap the whole set on a Windows light-theme c
 - **UI Font:** Clean system sans-serif (`Segoe UI` / system UI) with consistent hierarchy; use monospace (`Consolas` / `Cascadia Mono` / `JetBrains Mono`) for paths, logs, metrics, and numeric readouts.
 - **Tabular figures:** Enable tabular/monospaced numerals for counters, sizes, percentages, and throughput so numbers do not jitter during live updates.
 - **DPI & Theme Sync:** Scale all dimensions from Per-Monitor DPI V2 and update surface/accent tokens cleanly on Windows theme changes.
+## 4. Contrast (measured, WCAG ratios)
+Text tokens measured against the surfaces they sit on; the floor is 4.5:1 for body and small text.
+
+| Pair | Dark | Light |
+|---|---|---|
+| `fg.primary` on `bg.surface` | 10.75:1 | 10.22:1 |
+| `fg.secondary` on `bg.surface` | 8.59:1 | 7.78:1 |
+| `fg.muted` on `bg.surface` | 5.30:1 | 5.74:1 |
+| `fg.muted` on `bg.elevated` (worst surface) | 4.72:1 | 4.75:1 |
+| `accent.primary` on `bg.surface` (UI/focus, 3:1 floor) | 4.29:1 | 4.82:1 |
+
+`fg.muted` was `#928374` in both themes in 1.0.0 (4.02:1 dark, 3.24:1 light on surface) and was brightened/darkened within the Gruvbox family to clear the floor.

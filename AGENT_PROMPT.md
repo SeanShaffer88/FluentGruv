@@ -10,7 +10,7 @@ When creating or modifying any user interface code for a Windows application, re
    - Keep secondary inspectors, filters, logs, and settings in modular slide-out drawers or dockable panels that tuck away cleanly.
    - Support system-tray minimization and restore/validate window geometry against active monitors.
 3. **Apply Gruvbox Dark + Red tokens:**
-   - Use the Gruvbox Dark surface and text tokens (`#1D2021`, `#282828`, `#32302F`, `#EBDBB2`, `#D5C4A1`, `#928374`) and red accent tokens (`#FB4934`, `#CC241D`, `#3B1D1B`) from `TOKENS.md`; on a Windows light-theme change, swap the whole set for the `themes.light` values in `tokens.json` — never mix themes token by token.
+   - Use the Gruvbox Dark surface and text tokens (`#1D2021`, `#282828`, `#32302F`, `#EBDBB2`, `#D5C4A1`, `#A89984`) and red accent tokens (`#FB4934`, `#CC241D`, `#3B1D1B`) from `TOKENS.md`; on a Windows light-theme change, swap the whole set for the `themes.light` values in `tokens.json` — never mix themes token by token.
    - Maintain crisp contrast, symmetrical alignment, and circular/radial progress indicators where progress is shown.
 4. **Preserve ergonomics & scope:**
    - Support `Tab` navigation, `Esc` to close/cancel, `Enter` to submit, and clear tooltips on controls and headers.
